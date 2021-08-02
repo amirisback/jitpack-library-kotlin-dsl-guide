@@ -1,6 +1,8 @@
 ## jitpack-library-test
 [![](https://jitpack.io/v/amirisback/jitpack-library-test.svg?style=flat-square)](https://jitpack.io/#amirisback/jitpack-library-test) <br>
 Repository for testing build from jitpack.io
+- Red : Failed
+- Green : Success / Pass
 
 ## Colaborator
 Very open to anyone, I'll write your name under this, please contribute by sending an email to me
