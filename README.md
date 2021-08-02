@@ -1,5 +1,5 @@
 ## jitpack-library-test
-[![](https://jitpack.io/v/amirisback/jitpack-library-test.svg?style=flat-square)](https://jitpack.io/#amirisback/jitpack-library-test)
+[![](https://jitpack.io/v/amirisback/jitpack-library-test.svg?style=flat-square)](https://jitpack.io/#amirisback/jitpack-library-test) <br>
 Repository for testing build from jitpack.io
 
 ## Colaborator
