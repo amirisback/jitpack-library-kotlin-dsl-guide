@@ -12,4 +12,9 @@ package com.frogobox.test
  * All rights reserved
  *
  */
- 
+
+object JitlibApps {
+
+    const val TAG = "Jitpack Library Variable"
+
+}
