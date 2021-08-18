@@ -1,5 +1,2 @@
 jdk:
   - openjdk11
-install:
-  - ./gradlew :JitpackLibTest:build :JitpackLibTest:publishToMavenLocal -x :JitpackLibTest:test
-  - find . -name "*.aar"

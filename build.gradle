@@ -1,6 +1,14 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     ext {
+
+        def versionMajor = 1
+        def versionMinor = 0
+        def versionPatch = 2
+
+        projectVersionCode = (versionMajor * 100) + (versionMinor * 10) + (versionPatch * 1)
+        projectVersionName = "$versionMajor.$versionMinor.$versionPatch"
+
         compose_version = '1.0.0'
     }
     repositories {
