@@ -19,7 +19,7 @@ Repository for testing build from jitpack.io
         id 'maven-publish'
     }
 
-### Step 3. Add publish code library
+### Step 3. Add publish code library on build.gradle library module
 
     afterEvaluate {
         publishing {
