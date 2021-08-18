@@ -4,6 +4,48 @@ Repository for testing build from jitpack.io
 - Red : Failed
 - Green : Success / Pass
 
+## How To Publish Android Lib Using openJDK 11 and AGP 7.0.0 +
+
+### Step 1. Add jitpack.yml on root project
+
+    jdk:
+      - openjdk11
+
+### Step 2. Add maven-publish on plugins
+
+    plugins {
+        id 'com.android.library'
+        ...
+        id 'maven-publish'
+    }
+
+### Step 3. Add publish code library
+
+    afterEvaluate {
+        publishing {
+            publications {
+
+                // Creates a Maven publication called "release".
+                release(MavenPublication) {
+
+                    // Applies the component for the release build variant.
+                    from components.release
+
+                    // Library Package Name
+                    groupId = 'com.frogobox.test'
+
+                    // Github Repository Name
+                    artifactId = 'jitpack-library-test'
+
+                    // Version Library Name
+                    version = "$projectVersionName"
+
+                }
+            }
+        }
+    }
+
+
 ## Colaborator
 Very open to anyone, I'll write your name under this, please contribute by sending an email to me
 
