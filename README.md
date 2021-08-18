@@ -4,6 +4,35 @@ Repository for testing build from jitpack.io
 - Red : Failed
 - Green : Success / Pass
 
+## Version Release
+This Is Latest Release
+
+    $version_release = 1.0.4
+
+What's New??
+
+    * Update Build Gradle to 7.0.0 *
+    * Enhance Performance *
+
+## Download this project
+
+### Step 1. Add the JitPack repository to your build file (build.gradle : Project)
+
+    Add it in your root build.gradle at the end of repositories:
+
+    	allprojects {
+    		repositories {
+    			...
+    			maven { url 'https://jitpack.io' }
+    		}
+    	}
+
+### Step 2. Add the dependency (build.gradle : Module)
+
+    dependencies {
+        implementation 'com.github.amirisback:jitpack-library-test:1.0.4'
+    }
+
 ## How To Publish Android Lib Using openJDK 11 and AGP 7.0.0 +
 
 ### Step 1. Add jitpack.yml on root project
@@ -63,3 +92,5 @@ Waiting for your contribute
 ## Attention !!!
 - Please enjoy and don't forget fork and give a star
 - Don't Forget Follow My Github Account
+
+![ScreenShoot Apps](docs/image/mad_score.png?raw=true)
