@@ -9,7 +9,8 @@ buildscript {
         projectVersionCode = (versionMajor * 100) + (versionMinor * 10) + (versionPatch * 1)
         projectVersionName = "$versionMajor.$versionMinor.$versionPatch"
 
-        compose_version = '1.0.0'
+        kotlin_version = '1.5.10'
+        compose_version = '1.0.1'
     }
     repositories {
         google()
@@ -17,7 +18,7 @@ buildscript {
     }
     dependencies {
         classpath "com.android.tools.build:gradle:7.0.0"
-        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.21'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
