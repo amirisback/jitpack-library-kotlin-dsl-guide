@@ -16,5 +16,6 @@ package com.frogobox.test
 object JitlibApps {
 
     const val TAG = "Jitpack Library Variable"
+    const val MULTI_PLATFORM = "multi-platform-library-test"
 
 }

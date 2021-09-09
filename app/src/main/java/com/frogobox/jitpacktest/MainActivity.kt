@@ -9,6 +9,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import com.frogobox.jitpacktest.ui.theme.JItpackTestTheme
+import com.frogobox.test.JitlibApps
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,6 +21,7 @@ class MainActivity : ComponentActivity() {
                     Greeting("Android")
                 }
             }
+
         }
     }
 }
