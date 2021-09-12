@@ -8,5 +8,6 @@ dependencyResolutionManagement {
 }
 rootProject.name = "JitpackLibTest"
 include ':app'
-include ':jitlib'
+include ':androidlibfirst'
+include ':androidlibsecond'
 include ':kotlinlib'

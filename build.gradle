@@ -8,19 +8,27 @@ buildscript {
 
         def versionMajor = 1
         def versionMinor = 0
-        def versionPatch = 5
+        def versionPatch = 6
 
         def appDomain = "com"
         def appDevConsole = "frogobox"
         def appName = "jitpacktest"
-        def library = "test"
+
+        def firstLibrary = "androidlibfirst"
+        def secondLibrary = "androidlibsecond"
+        def kotlinLibrary = "kotlinlib"
 
         projectCompileSdk = 31
         projectMinSdk = 21
         projectTargetSdk = projectCompileSdk
 
         projectApplicationId = "$appDomain.$appDevConsole.$appName"
-        projectLibraryId = "$appDomain.$appDevConsole.$library"
+
+        projectFirstLibraryId = "$appDomain.$appDevConsole.$firstLibrary"
+        projectSecondLibraryId = "$appDomain.$appDevConsole.$secondLibrary"
+
+        projectKotlinLibraryId = "$appDomain.$appDevConsole.$kotlinLibrary"
+
         projectVersionCode = (versionMajor * 100) + (versionMinor * 10) + (versionPatch * 1)
         projectVersionName = "$versionMajor.$versionMinor.$versionPatch"
 
@@ -35,7 +43,7 @@ buildscript {
 
     dependencies {
         classpath 'com.android.tools.build:gradle:7.0.2'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.30"
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
