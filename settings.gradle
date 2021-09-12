@@ -6,7 +6,7 @@ dependencyResolutionManagement {
         jcenter() // Warning: this repository is going to shut down soon
     }
 }
-rootProject.name = "JitpackLibTest"
+rootProject.name = "JitpackGuide"
 include ':app'
 include ':androidlibfirst'
 include ':androidlibsecond'

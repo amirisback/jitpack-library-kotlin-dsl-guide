@@ -3,7 +3,7 @@
 
 For openJDK 11 and AGP 7.0.0 +
 - Please read every single note for detail
-- Tutorial [Click Here](https://github.com/amirisback/jitpack-library-test#how-to-publish-android-lib-using-openjdk-11-and-agp-700-)
+- Tutorial [Click Here](https://github.com/amirisback/jitpack-library-guide#how-to-publish-android-lib-using-openjdk-11-and-agp-700-)
 
 Repository for testing build from jitpack.io
 - Red : Failed
@@ -12,7 +12,7 @@ Repository for testing build from jitpack.io
 ## Version Release
 This Is Latest Release
 
-    $version_release = 1.1.0
+    $version_release = 1.1.1
     $version_dcendents = 2.1
 
 What's New??
@@ -24,6 +24,7 @@ What's New??
     * Kotlin Library *
     * Experimental 3 Library *
     * Experimental Java/Kotlin Library *
+    * Renaming JitPack Library Test Into JitPack Library Guide *
 
 ## Download this project
 
@@ -41,7 +42,7 @@ What's New??
 ### Step 2. Add the dependency (build.gradle : Module)
 
     dependencies {
-        implementation 'com.github.amirisback:jitpack-library-test:1.1.0'
+        implementation 'com.github.amirisback:jitpack-library-guide:1.1.1'
     }
 
 ## ScreenShoot External Libraries Implementation
@@ -90,6 +91,7 @@ What's New??
                 release(MavenPublication) {
 
                     // Applies the component for the release build variant.
+                    // NOTE : Delete this line code if you publish Native Java / Kotlin Library
                     from components.release
 
                     // Library Package Name (Example : "com.frogobox.androidfirstlib")

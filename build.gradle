@@ -3,12 +3,12 @@ buildscript {
 
     ext {
 
-        nameApp = "Jitpack Library Test"
+        nameApp = "Jitpack Guide"
         nameAPK = nameApp.toLowerCase().replace(" ", "-")
 
         def versionMajor = 1
         def versionMinor = 1
-        def versionPatch = 0
+        def versionPatch = 1
 
         def appDomain = "com"
         def appDevConsole = "frogobox"
