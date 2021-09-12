@@ -4,8 +4,6 @@ plugins {
     id 'maven-publish'
 }
 
-group="com.github.amirisback"
-
 android {
     compileSdk projectCompileSdk
 
