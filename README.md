@@ -64,6 +64,7 @@ What's New??
     }
 
 ### Step 3. Add maven-publish on plugins (build.gradle : Module)
+- Attention : Choose one of the options below
 
 #### Option 1
 
