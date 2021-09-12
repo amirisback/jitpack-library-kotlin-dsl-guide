@@ -39,6 +39,10 @@ What's New??
         implementation 'com.github.amirisback:jitpack-library-test:1.1.0'
     }
 
+## ScreenShoot External Libraries Implementation
+
+![ScreenShoot Apps](docs/image/result.png?raw=true)
+
 ## How To Publish Android Lib Using openJDK 11 and AGP 7.0.0 +
 
 ### Step 1. Add jitpack.yml on root project
@@ -46,14 +50,23 @@ What's New??
     jdk:
       - openjdk11
 
-### Step 2. Add root build.gradle buildscript dependencies (This Step For Multiple Module / Library)
+### Step 2. Add classpath dcendents in buildscript (build.gradle : Project)
 
     dependencies {
         ...
+        // NOTE : This classpath use for multiple library module
         classpath 'com.github.dcendents:android-maven-gradle-plugin:$version_dcendents'
     }
 
-### Step 3. Add maven-publish on plugins
+### Step 3. Add maven-publish on plugins (build.gradle : Module)
+
+#### Option 1
+
+    apply plugin: 'com.android.library'
+    ...
+    apply plugin: 'maven-publish'
+
+#### Option 2
 
     plugins {
         id 'com.android.library'
@@ -61,7 +74,7 @@ What's New??
         id 'maven-publish'
     }
 
-### Step 4. Add publish code library on build.gradle library module
+### Step 4. Add publish code library (build.gradle : Module)
 
     afterEvaluate {
         publishing {
