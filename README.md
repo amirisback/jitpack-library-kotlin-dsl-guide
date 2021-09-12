@@ -7,12 +7,15 @@ Repository for testing build from jitpack.io
 ## Version Release
 This Is Latest Release
 
-    $version_release = 1.0.5
+    $version_release = 1.0.6
 
 What's New??
 
     * Update Build Gradle to 7.0.0 *
     * Enhance Performance *
+    * Android Library First *
+    * Android Library Second *
+    * Kotlin Library *
     * Experimental 3 Library *
     * Experimental Java/Kotlin Library *
 
@@ -32,7 +35,7 @@ What's New??
 ### Step 2. Add the dependency (build.gradle : Module)
 
     dependencies {
-        implementation 'com.github.amirisback:jitpack-library-test:1.0.5'
+        implementation 'com.github.amirisback:jitpack-library-test:1.0.6'
     }
 
 ## How To Publish Android Lib Using openJDK 11 and AGP 7.0.0 +
@@ -63,7 +66,7 @@ What's New??
                     from components.release
 
                     // Library Package Name
-                    groupId = 'com.frogobox.test'
+                    groupId = 'com.frogobox.sample'
 
                     // Github Repository Name
                     artifactId = 'jitpack-library-test'
