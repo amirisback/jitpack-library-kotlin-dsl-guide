@@ -9,3 +9,4 @@ dependencyResolutionManagement {
 rootProject.name = "JitpackLibTest"
 include ':app'
 include ':jitlib'
+include ':kotlinlib'
