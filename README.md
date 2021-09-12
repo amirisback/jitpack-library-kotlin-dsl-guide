@@ -1,5 +1,10 @@
 ## jitpack-library-test
 [![](https://jitpack.io/v/amirisback/jitpack-library-test.svg?style=flat-square)](https://jitpack.io/#amirisback/jitpack-library-test) <br>
+
+For openJDK 11 and AGP 7.0.0 +
+- Please read every single note for detail
+- Tutorial [Click Here](https://github.com/amirisback/jitpack-library-test#how-to-publish-android-lib-using-openjdk-11-and-agp-700-)
+
 Repository for testing build from jitpack.io
 - Red : Failed
 - Green : Success / Pass
@@ -45,7 +50,7 @@ What's New??
 
 ## How To Publish Android Lib Using openJDK 11 and AGP 7.0.0 +
 
-### Step 1. Add jitpack.yml on root project
+### Step 1. Create File jitpack.yml on root project. Add this code inside files
 
     jdk:
       - openjdk11
