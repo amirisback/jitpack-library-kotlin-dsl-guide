@@ -4,6 +4,8 @@ plugins {
     id 'maven-publish'
 }
 
+group="com.github.amirisback"
+
 java {
     sourceCompatibility = JavaVersion.VERSION_11
     targetCompatibility = JavaVersion.VERSION_11

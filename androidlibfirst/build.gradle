@@ -4,6 +4,8 @@ plugins {
     id 'maven-publish'
 }
 
+group="com.github.amirisback"
+
 kotlin {
     android {
         compileSdk projectCompileSdk
@@ -55,7 +57,7 @@ afterEvaluate {
 
                 // You can then customize attributes of the publication as shown below.
                 groupId = "$projectFirstLibraryId"
-                artifactId = "$nameAPK"
+                artifactId = "$firstLibrary"
                 version = "$projectVersionName"
             }
         }
