@@ -7,11 +7,11 @@ Repository for testing build from jitpack.io
 ## Version Release
 This Is Latest Release
 
-    $version_release = 1.0.6
+    $version_release = 1.0.7
 
 What's New??
 
-    * Update Build Gradle to 7.0.0 *
+    * Update Build Gradle to 7.0.2 *
     * Enhance Performance *
     * Android Library First *
     * Android Library Second *
@@ -35,7 +35,7 @@ What's New??
 ### Step 2. Add the dependency (build.gradle : Module)
 
     dependencies {
-        implementation 'com.github.amirisback:jitpack-library-test:1.0.6'
+        implementation 'com.github.amirisback:jitpack-library-test:1.0.7'
     }
 
 ## How To Publish Android Lib Using openJDK 11 and AGP 7.0.0 +
