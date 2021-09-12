@@ -8,6 +8,7 @@ Repository for testing build from jitpack.io
 This Is Latest Release
 
     $version_release = 1.1.0
+    $version_dcendents = 2.1
 
 What's New??
 
@@ -45,7 +46,14 @@ What's New??
     jdk:
       - openjdk11
 
-### Step 2. Add maven-publish on plugins
+### Step 2. Add root build.gradle buildscript dependencies (This Step For Multiple Module / Library)
+
+    dependencies {
+        ...
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:$version_dcendents'
+    }
+
+### Step 3. Add maven-publish on plugins
 
     plugins {
         id 'com.android.library'
@@ -53,7 +61,7 @@ What's New??
         id 'maven-publish'
     }
 
-### Step 3. Add publish code library on build.gradle library module
+### Step 4. Add publish code library on build.gradle library module
 
     afterEvaluate {
         publishing {
@@ -65,13 +73,15 @@ What's New??
                     // Applies the component for the release build variant.
                     from components.release
 
-                    // Library Package Name
-                    groupId = 'com.frogobox.sample'
+                    // Library Package Name (Example : "com.frogobox.androidfirstlib")
+                    // NOTE : Different GroupId For Each Library / Module, So That Each Library Is Not Overwritten
+                    groupId = $projectFirstLibraryId
 
-                    // Github Repository Name
-                    artifactId = 'jitpack-library-test'
+                    // Library Name / Module Name (Example : "androidfirstlib")
+                    // NOTE : Different ArtifactId For Each Library / Module, So That Each Library Is Not Overwritten
+                    artifactId = $firstLibrary
 
-                    // Version Library Name
+                    // Version Library Name (Example : "1.0.0")
                     version = "$projectVersionName"
 
                 }
