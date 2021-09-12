@@ -4,15 +4,25 @@ plugins {
     id 'maven-publish'
 }
 
-group="com.github.amirisback"
-
 java {
     sourceCompatibility = JavaVersion.VERSION_11
     targetCompatibility = JavaVersion.VERSION_11
 }
 
 dependencies {
-
     implementation("com.google.code.gson:gson:2.8.8")
+}
 
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                // You can then customize attributes of the publication as shown below.
+                groupId = "$projectKotlinLibraryId"
+                artifactId = "$kotlinLibrary"
+                version = "$projectVersionName"
+            }
+        }
+    }
 }
