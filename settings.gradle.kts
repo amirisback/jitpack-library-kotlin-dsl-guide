@@ -3,12 +3,9 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        jcenter() // Warning: this repository is going to shut down soon
-        maven { url 'https://jitpack.io' }
+        maven { url = uri("https://jitpack.io") }
     }
 }
+
 rootProject.name = "JitpackKotlinDslGuide"
-include ':app'
-include ':dslfirst'
-include ':dslsecond'
-include ':kotlinlib'
+include(":app", ":dslfirst", "dslsecond", "kotlinlib")
