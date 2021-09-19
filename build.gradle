@@ -3,18 +3,18 @@ buildscript {
 
     ext {
 
-        nameApp = "Jitpack Guide"
+        nameApp = "Jitpack Kotlin Dsl Guide"
         nameAPK = nameApp.toLowerCase().replace(" ", "-")
 
         versionMajor = 1
-        versionMinor = 1
-        versionPatch = 2
+        versionMinor = 0
+        versionPatch = 0
 
         appDomain = "com"
         appDevConsole = "frogobox"
         appName = "jitpacktest"
 
-        firstLibrary = "androidlibfirst"
+        firstLibrary = "dslfirst"
         secondLibrary = "androidlibsecond"
         kotlinLibrary = "kotlinlib"
 

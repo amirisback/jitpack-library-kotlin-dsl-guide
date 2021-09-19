@@ -1,4 +1,4 @@
-package com.frogobox.androidlibfirst
+package com.frogobox.dslfirst
 
 /*
  * Created by faisalamir on 02/08/21

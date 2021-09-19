@@ -1,4 +1,4 @@
-package com.frogobox.androidlibfirst
+package com.frogobox.dslfirst
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
