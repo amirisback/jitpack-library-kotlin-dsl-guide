@@ -7,7 +7,7 @@ dependencyResolutionManagement {
         maven { url 'https://jitpack.io' }
     }
 }
-rootProject.name = "JitpackGuide"
+rootProject.name = "JitpackGroovyGuide"
 include ':app'
 include ':androidlibfirst'
 include ':androidlibsecond'
