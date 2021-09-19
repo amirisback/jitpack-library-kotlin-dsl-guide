@@ -10,5 +10,5 @@ dependencyResolutionManagement {
 rootProject.name = "JitpackKotlinDslGuide"
 include ':app'
 include ':dslfirst'
-include ':androidlibsecond'
+include ':dslsecond'
 include ':kotlinlib'

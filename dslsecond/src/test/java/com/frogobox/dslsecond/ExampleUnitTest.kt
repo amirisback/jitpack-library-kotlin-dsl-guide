@@ -1,4 +1,4 @@
-package com.frogobox.androidlibsecond
+package com.frogobox.dslsecond
 
 import org.junit.Test
 

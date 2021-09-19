@@ -1,4 +1,4 @@
-package com.frogobox.androidlibsecond
+package com.frogobox.dslsecond
 
 /*
  * Created by faisalamir on 02/08/21

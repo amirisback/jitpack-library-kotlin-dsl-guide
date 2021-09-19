@@ -15,7 +15,7 @@ buildscript {
         appName = "jitpacktest"
 
         firstLibrary = "dslfirst"
-        secondLibrary = "androidlibsecond"
+        secondLibrary = "dslsecond"
         kotlinLibrary = "kotlinlib"
 
         projectCompileSdk = 31
