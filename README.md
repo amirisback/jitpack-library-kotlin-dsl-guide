@@ -1,9 +1,10 @@
 ## jitpack-library-guide
-[![](https://jitpack.io/v/amirisback/jitpack-library-guide.svg?style=flat-square)](https://jitpack.io/#amirisback/jitpack-library-guide) <br>
+[![](https://jitpack.io/v/amirisback/jitpack-library-groovy-guide.svg?style=flat-square)](https://jitpack.io/#amirisback/jitpack-library-guide) <br>
 
 For openJDK 11 and AGP 7.0.0 +
 - Please read every single note for detail
-- Tutorial [Click Here](https://github.com/amirisback/jitpack-library-guide#how-to-publish-android-lib-using-openjdk-11-and-agp-700-)
+- Tutorial [Click Here](https://github.com/amirisback/jitpack-library-groovy-guide#how-to-publish-android-lib-using-openjdk-11-and-agp-700-)
+- Kotlin DSL [Click Here](https://github.com/amirisback/jitpack-library-kotlin-dsl-guide)
 
 Repository for testing build from jitpack.io
 - Red : Failed
@@ -12,7 +13,7 @@ Repository for testing build from jitpack.io
 ## Version Release
 This Is Latest Release
 
-    $version_release = 1.1.1
+    $version_release = 1.1.2
     $version_dcendents = 2.1
 
 What's New??
@@ -42,7 +43,7 @@ What's New??
 ### Step 2. Add the dependency (build.gradle : Module)
 
     dependencies {
-        implementation 'com.github.amirisback:jitpack-library-guide:1.1.1'
+        implementation 'com.github.amirisback:jitpack-library-groovy-guide:1.1.2'
     }
 
 ## ScreenShoot External Libraries Implementation
@@ -83,6 +84,8 @@ What's New??
 
 ### Step 4. Add publish code library (build.gradle : Module)
 
+    // NOTE : Delete afterEvaluate code if you publish Native Java / Kotlin Library
+    // NOTE : Just Using publishing function
     afterEvaluate {
         publishing {
             publications {
@@ -91,19 +94,18 @@ What's New??
                 release(MavenPublication) {
 
                     // Applies the component for the release build variant.
-                    // NOTE : Delete this line code if you publish Native Java / Kotlin Library
                     from components.release
 
                     // Library Package Name (Example : "com.frogobox.androidfirstlib")
                     // NOTE : Different GroupId For Each Library / Module, So That Each Library Is Not Overwritten
-                    groupId = $projectFirstLibraryId
+                    groupId = projectFirstLibraryId
 
                     // Library Name / Module Name (Example : "androidfirstlib")
                     // NOTE : Different ArtifactId For Each Library / Module, So That Each Library Is Not Overwritten
-                    artifactId = $firstLibrary
+                    artifactId = firstLibrary
 
                     // Version Library Name (Example : "1.0.0")
-                    version = "$projectVersionName"
+                    version = projectVersionName
 
                 }
             }

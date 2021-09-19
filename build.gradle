@@ -6,13 +6,13 @@ buildscript {
         nameApp = "Jitpack Guide"
         nameAPK = nameApp.toLowerCase().replace(" ", "-")
 
-        def versionMajor = 1
-        def versionMinor = 1
-        def versionPatch = 1
+        versionMajor = 1
+        versionMinor = 1
+        versionPatch = 2
 
-        def appDomain = "com"
-        def appDevConsole = "frogobox"
-        def appName = "jitpacktest"
+        appDomain = "com"
+        appDevConsole = "frogobox"
+        appName = "jitpacktest"
 
         firstLibrary = "androidlibfirst"
         secondLibrary = "androidlibsecond"

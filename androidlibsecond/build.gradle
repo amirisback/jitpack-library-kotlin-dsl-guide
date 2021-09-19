@@ -44,18 +44,29 @@ dependencies {
 
 }
 
+// NOTE : Delete afterEvaluate code if you publish Native Java / Kotlin Library
+// NOTE : Just Using publishing function
 afterEvaluate {
     publishing {
         publications {
+
             // Creates a Maven publication called "release".
             release(MavenPublication) {
+
                 // Applies the component for the release build variant.
                 from components.release
 
-                // You can then customize attributes of the publication as shown below.
-                groupId = "$projectSecondLibraryId"
-                artifactId = "$secondLibrary"
-                version = "$projectVersionName"
+                // Library Package Name (Example : "com.frogobox.androidfirstlib")
+                // NOTE : Different GroupId For Each Library / Module, So That Each Library Is Not Overwritten
+                groupId = projectSecondLibraryId
+
+                // Library Name / Module Name (Example : "androidfirstlib")
+                // NOTE : Different ArtifactId For Each Library / Module, So That Each Library Is Not Overwritten
+                artifactId = secondLibrary
+
+                // Version Library Name (Example : "1.0.0")
+                version = projectVersionName
+
             }
         }
     }

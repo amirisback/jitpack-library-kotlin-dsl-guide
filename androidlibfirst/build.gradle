@@ -45,18 +45,29 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 }
 
+// NOTE : Delete afterEvaluate code if you publish Native Java / Kotlin Library
+// NOTE : Just Using publishing function
 afterEvaluate {
     publishing {
         publications {
+
             // Creates a Maven publication called "release".
             release(MavenPublication) {
+
                 // Applies the component for the release build variant.
                 from components.release
 
-                // You can then customize attributes of the publication as shown below.
-                groupId = "$projectFirstLibraryId"
-                artifactId = "$firstLibrary"
-                version = "$projectVersionName"
+                // Library Package Name (Example : "com.frogobox.androidfirstlib")
+                // NOTE : Different GroupId For Each Library / Module, So That Each Library Is Not Overwritten
+                groupId = projectFirstLibraryId
+
+                // Library Name / Module Name (Example : "androidfirstlib")
+                // NOTE : Different ArtifactId For Each Library / Module, So That Each Library Is Not Overwritten
+                artifactId = firstLibrary
+
+                // Version Library Name (Example : "1.0.0")
+                version = projectVersionName
+
             }
         }
     }
