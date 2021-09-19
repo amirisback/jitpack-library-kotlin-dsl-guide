@@ -12,7 +12,7 @@ buildscript {
 
         appDomain = "com"
         appDevConsole = "frogobox"
-        appName = "jitpacktest"
+        appName = "jitpackdsl"
 
         firstLibrary = "dslfirst"
         secondLibrary = "dslsecond"

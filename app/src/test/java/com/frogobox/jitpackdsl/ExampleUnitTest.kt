@@ -1,4 +1,4 @@
-package com.frogobox.jitpacktest
+package com.frogobox.jitpackdsl
 
 import org.junit.Test
 

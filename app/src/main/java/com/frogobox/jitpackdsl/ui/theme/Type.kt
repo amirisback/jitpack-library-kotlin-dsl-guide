@@ -1,4 +1,4 @@
-package com.frogobox.jitpacktest.ui.theme
+package com.frogobox.jitpackdsl.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle

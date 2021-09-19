@@ -1,4 +1,4 @@
-package com.frogobox.jitpacktest
+package com.frogobox.jitpackdsl
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -8,7 +8,7 @@ import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import com.frogobox.jitpacktest.ui.theme.JItpackTestTheme
+import com.frogobox.jitpackdsl.ui.theme.JItpackTestTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,4 +1,4 @@
-package com.frogobox.jitpacktest
+package com.frogobox.jitpackdsl
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
