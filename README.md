@@ -1,5 +1,5 @@
 ## jitpack-library-kotlin-dsl-guide
-[![](https://jitpack.io/v/amirisback/jitpack-library-groovy-guide.svg?style=flat-square)](https://jitpack.io/#amirisback/jitpack-library-guide) <br>
+[![](https://jitpack.io/v/amirisback/jitpack-library-kotlin-dsl-guide.svg?style=flat-square)](https://jitpack.io/#amirisback/jitpack-library-kotlin-dsl-guide) <br>
 
 For openJDK 11 and AGP 7.0.0 +
 - Please read every single note for detail
