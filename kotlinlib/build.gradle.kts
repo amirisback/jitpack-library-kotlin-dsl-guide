@@ -21,7 +21,7 @@ publishing {
     publications {
 
         // Creates a Maven publication called "release".
-        register("release", MavenPublication::class) {
+        create<MavenPublication>("release")  {
 
             // Library Package Name (Example : "com.frogobox.androidfirstlib")
             // NOTE : Different GroupId For Each Library / Module, So That Each Library Is Not Overwritten

@@ -25,7 +25,7 @@ What's New??
     * Kotlin Library *
     * Experimental 3 Library *
     * Experimental Java/Kotlin Library *
-    * Renaming JitPack Library Guide Into JitPack Library Groovy Guide *
+    * Kotlin DSL / KTS *
 
 ## Download this project
 
