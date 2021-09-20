@@ -43,7 +43,7 @@ What's New??
 ### Step 2. Add the dependency (build.gradle : Module)
 
     dependencies {
-        implementation 'com.github.amirisback:jitpack-library-groovy-guide:1.1.2'
+        implementation 'com.github.amirisback:jitpack-library-kotlin-dsl-guide:1.0.0'
     }
 
 ## ScreenShoot External Libraries Implementation
@@ -58,59 +58,58 @@ What's New??
       - openjdk11
 
 ### Step 2. Add classpath dcendents in buildscript (build.gradle : Project)
-
-    dependencies {
-        ...
-        // NOTE : This classpath use for multiple library module
-        classpath 'com.github.dcendents:android-maven-gradle-plugin:$version_dcendents'
-    }
+```kotlin
+dependencies {
+    ...
+    // NOTE : This classpath use for multiple library module
+    classpath("com.github.dcendents:android-maven-gradle-plugin:2.1")
+}
+```
 
 ### Step 3. Add maven-publish on plugins (build.gradle : Module)
 - Attention : Choose one of the options below
 
-#### Option 1
-
-    apply plugin: 'com.android.library'
-    ...
-    apply plugin: 'maven-publish'
-
-#### Option 2
-
-    plugins {
-        id 'com.android.library'
-        ...
-        id 'maven-publish'
-    }
-
+```kotlin
+plugins {
+    id("com.android.library")
+    kotlin("android")
+    id("kotlin-kapt")
+    `maven-publish`
+}
+```
 ### Step 4. Add publish code library (build.gradle : Module)
 
-    // NOTE : Delete afterEvaluate code if you publish Native Java / Kotlin Library
-    // NOTE : Just Using publishing function
-    afterEvaluate {
-        publishing {
-            publications {
+```kotlin
+// NOTE : Delete afterEvaluate code if you publish Native Java / Kotlin Library
+// NOTE : Just Using publishing function
+afterEvaluate {
+    publishing {
+        publications {
 
-                // Creates a Maven publication called "release".
-                release(MavenPublication) {
+            // Creates a Maven publication called "release".
+            register("release", MavenPublication::class) {
 
-                    // Applies the component for the release build variant.
-                    from components.release
+                // Applies the component for the release build variant.
+                // NOTE : Delete this line code if you publish Native Java / Kotlin Library
+                from(components["release"])
 
-                    // Library Package Name (Example : "com.frogobox.androidfirstlib")
-                    // NOTE : Different GroupId For Each Library / Module, So That Each Library Is Not Overwritten
-                    groupId = projectFirstLibraryId
+                // Library Package Name (Example : "com.frogobox.androidfirstlib")
+                // NOTE : Different GroupId For Each Library / Module, So That Each Library Is Not Overwritten
+                groupId = ProjectSetting.PROJECT_LIB_ID_FIRST
 
-                    // Library Name / Module Name (Example : "androidfirstlib")
-                    // NOTE : Different ArtifactId For Each Library / Module, So That Each Library Is Not Overwritten
-                    artifactId = firstLibrary
+                // Library Name / Module Name (Example : "androidfirstlib")
+                // NOTE : Different ArtifactId For Each Library / Module, So That Each Library Is Not Overwritten
+                artifactId = ProjectSetting.LIBRARY_FIRST
 
-                    // Version Library Name (Example : "1.0.0")
-                    version = projectVersionName
+                // Version Library Name (Example : "1.0.0")
+                version = ProjectSetting.PROJECT_VERSION_NAME
 
-                }
             }
+
         }
     }
+}
+```
 
 
 ## Colaborator
